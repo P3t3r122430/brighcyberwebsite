@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact — Bright Cyber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Bright Computer College & Cyber Services. We respond fast." />
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="page contact-page">
+  <div class="topbar">
+    <div class="container">
+      <span>📞 +254768726828</span>
+      <span>✉️ brightcyber23@gmail.com</span>
+      <span>📍 Bright Computer College, Kabati, Kenya</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Bright Cyber</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a class="btn btn-sm btn-outline" href="login.html">Login</a>
+        <a class="btn btn-sm btn-primary" href="login.html#signup">Sign Up</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open Menu"></button>
+    </div>
+  </header>
+
+  <section class="hero slim" style="--hero:url('assets/images/hero-contact.jpg')">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We reply fast. Use the form or WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <form id="contactForm" action="https://formspree.io/f/mwpqdrbw" method="POST" class="card form-card">
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="What do you need?"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New message from Bright Cyber website">
+        <button class="btn btn-primary" type="submit">Send Message</button>
+        <p class="form-note">You’ll also get a copy to your email.</p>
+        <div id="contactStatus" class="status" aria-live="polite"></div>
+      </form>
+
+      <div class="card">
+        <h3>Visit or Call</h3>
+        <p>📍 Bright Computer College, Kabati, Kenya</p>
+        <p>📞 +254768726828</p>
+        <p>✉️ brightcyber23@gmail.com</p>
+        <div class="map-placeholder" id="map">Map placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Bright Cyber</h4>
+        <p>Practical training & reliable cyber services in Kabati.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="policy.html">Privacy & Terms</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +254768726828</p>
+        <p>✉️ brightcyber23@gmail.com</p>
+        <p>📍 Kabati, Kenya</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="y"></span> Bright Cyber. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/254768726828" aria-label="WhatsApp">WhatsApp</a>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script src="assets/js/validation.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

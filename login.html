@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Account — Login / Sign Up | Bright Cyber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Login or create an account at Bright Cyber." />
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="page auth-page">
+  <div class="topbar">
+    <div class="container">
+      <span>📞 +254768726828</span>
+      <span>✉️ brightcyber23@gmail.com</span>
+      <span>📍 Bright Computer College, Kabati, Kenya</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Bright Cyber</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="policy.html">Policy</a>
+        <a class="active" href="login.html">Account</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open Menu"></button>
+    </div>
+  </header>
+
+  <section class="auth-hero" style="--hero:url('assets/images/login-bg.jpg')">
+    <div class="container auth-wrap">
+      <div class="auth-card card">
+        <div class="tabs">
+          <a href="#login" class="tab active" data-tab="login">Login</a>
+          <a href="#signup" class="tab" data-tab="signup">Sign Up</a>
+        </div>
+
+        <!-- LOGIN -->
+        <form id="loginForm" class="tab-panel active" autocomplete="on">
+          <div class="form-row">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" required placeholder="Your password" autocomplete="current-password" minlength="6">
+          </div>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p class="muted small"><a href="#" id="resetLink">Forgot password?</a></p>
+          <div id="loginStatus" class="status" aria-live="polite"></div>
+        </form>
+
+        <!-- SIGN UP -->
+        <form id="signupForm" class="tab-panel" autocomplete="on">
+          <div class="form-row">
+            <label for="signupEmail">Email</label>
+            <input id="signupEmail" type="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" type="password" required placeholder="At least 6 characters" autocomplete="new-password" minlength="6">
+          </div>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+          <div id="signupStatus" class="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Bright Cyber</h4>
+        <p>Practical training & reliable cyber services in Kabati.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="policy.html">Privacy & Terms</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +254768726828</p>
+        <p>✉️ brightcyber23@gmail.com</p>
+        <p>📍 Kabati, Kenya</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="y"></span> Bright Cyber. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/254768726828" aria-label="WhatsApp">WhatsApp</a>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <!-- App scripts -->
+  <!-- Your Firebase init (module with initializeApp, getAuth, export auth) -->
+  <script type="module" src="assets/js/firebase.js"></script>
+  <!-- Auth handlers: attaches submit listeners to the forms -->
+  <script type="module" src="assets/js/auth.js"></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script>
+    // Tabs
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach(t => t.addEventListener('click', e => {
+      e.preventDefault();
+      tabs.forEach(x=>x.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      t.classList.add('active');
+      document.querySelector(`.tab-panel${t.getAttribute('href')}`).classList.add('active');
+      history.replaceState(null, '', t.getAttribute('href'));
+    }));
+    // Deep link (#signup)
+    if (location.hash === '#signup') {
+      document.querySelector('.tab[href="#signup"]').click();
+    }
+    // Reset link placeholder (handled in auth.js if you implement)
+    document.getElementById('resetLink').addEventListener('click', e=>{
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      if (!email) return alert('Enter your email above first, then click reset.');
+      document.dispatchEvent(new CustomEvent('requestPasswordReset',{detail:{email}}));
+    });
+  </script>
+</body>
+</html>
