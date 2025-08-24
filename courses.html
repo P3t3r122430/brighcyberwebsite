@@ -1,127 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Courses — Bright Cyber</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Affordable, practical computer courses starting at KES 4,500." />
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body class="page courses-page">
-  <div class="topbar">
-    <div class="container">
-      <span>📞 +254768726828</span>
-      <span>✉️ brightcyber23@gmail.com</span>
-      <span>📍 Bright Computer College, Kabati, Kenya</span>
-    </div>
-  </div>
+  <title>Courses – Bright Cyber & Bookshop</title>
+  <meta name="description" content="Explore our computer training courses at Bright Cyber & Bookshop: Basic IT, Microsoft Office, and specialized skills." />
 
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Bright Cyber</a>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="courses.html">Courses</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-sm btn-outline" href="login.html">Login</a>
-        <a class="btn btn-sm btn-primary" href="login.html#signup">Sign Up</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open Menu"></button>
-    </div>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cyber.html">Bright Cyber</a></li>
+        <li><a href="bookshop.html">Bright Bookshop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="login.html" class="btn-secondary">Login / Sign Up</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero slim" style="--hero:url('assets/images/hero-courses.jpg')">
-    <div class="container">
+  <section class="hero cyber-hero" style="--hero-img:url('assets/images/courses-hero.jpg')">
+    <div class="hero-content">
       <h1>Courses</h1>
-      <p>Learn the real skills employers care about.</p>
+      <p>Practical IT training to boost your skills and career.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container grid-3">
-      <div class="card course-card">
-        <img src="assets/images/courses.jpg" alt="Computer Basics">
-        <h3>Computer Basics</h3>
-        <p>Intro to computers, files, OS, typing, internet essentials.</p>
-        <div class="price">KES 4,500</div>
-        <a class="btn btn-primary" href="login.html#signup">Enroll Now</a>
+  <section class="courses">
+    <div class="container grid-4">
+      <div class="card card-courses">
+        <h3>Basic Computer Skills</h3>
+        <p>Learn computer fundamentals, file management, and basic troubleshooting.</p>
+        <p class="price">KES 4,500</p>
       </div>
-      <div class="card course-card">
-        <img src="assets/images/hero-home.jpg" alt="MS Office Productivity">
-        <h3>MS Office Productivity</h3>
-        <p>Word, Excel, PowerPoint — documents, reports, invoices.</p>
-        <div class="price">KES 4,500</div>
-        <a class="btn btn-primary" href="login.html#signup">Enroll Now</a>
+      <div class="card card-courses">
+        <h3>Microsoft Office Suite</h3>
+        <p>Master Word, Excel, PowerPoint, and Outlook for personal or professional use.</p>
+        <p class="price">KES 6,000</p>
       </div>
-      <div class="card course-card">
-        <img src="assets/images/hero-services.jpg" alt="Graphic Design">
-        <h3>Graphic Design</h3>
-        <p>Canva &amp; basics of brand-ready posters, flyers, social media.</p>
-        <div class="price">KES 4,500</div>
-        <a class="btn btn-primary" href="login.html#signup">Enroll Now</a>
+      <div class="card card-courses">
+        <h3>Graphic Design & Editing</h3>
+        <p>Hands-on training with Photoshop, Canva, and other creative tools.</p>
+        <p class="price">KES 8,000</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section muted">
-    <div class="container grid-2">
-      <div>
-        <h2>How training works</h2>
-        <ul class="checks">
-          <li>Short, focused lessons</li>
-          <li>Hands-on practice in every session</li>
-          <li>Real tasks you’ll actually use</li>
-        </ul>
+      <div class="card card-courses">
+        <h3>Web Development Basics</h3>
+        <p>Learn HTML, CSS, and basic JavaScript to build your first website.</p>
+        <p class="price">KES 7,500</p>
       </div>
-      <div>
-        <img class="img-card" src="assets/images/hero-courses.jpg" alt="Training">
+      <div class="card card-courses">
+        <h3>Advanced Excel & Data Analysis</h3>
+        <p>Deep dive into formulas, pivot tables, and data visualization.</p>
+        <p class="price">KES 7,000</p>
+      </div>
+      <div class="card card-courses">
+        <h3>Computer Networking</h3>
+        <p>Learn basic network setup, troubleshooting, and internet connectivity.</p>
+        <p class="price">KES 9,000</p>
       </div>
     </div>
   </section>
 
-  <section class="section cta">
-    <div class="container cta-inner">
-      <h2>Enroll today</h2>
-      <p>Intakes open. Secure your slot now.</p>
-      <a class="btn btn-primary" href="login.html#signup">Create Account</a>
-      <a class="btn btn-outline" href="contact.html">Ask a Question</a>
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
+      <div class="footer-links"><a href="policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></div>
     </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Bright Cyber</h4>
-        <p>Practical training & reliable cyber services in Kabati.</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="policy.html">Privacy & Terms</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>📞 +254768726828</p>
-        <p>✉️ brightcyber23@gmail.com</p>
-        <p>📍 Kabati, Kenya</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">© <span id="y"></span> Bright Cyber. All rights reserved.</div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/254768726828" aria-label="WhatsApp">WhatsApp</a>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-  <script src="assets/js/main.js" defer></script>
+  <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

@@ -1,124 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Cyber Services — Bright Cyber</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Printing, scanning, browsing, typing, online applications, KRA, HELB, and more." />
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body class="page services-page">
-  <div class="topbar">
-    <div class="container">
-      <span>📞 +254768726828</span>
-      <span>✉️ brightcyber23@gmail.com</span>
-      <span>📍 Bright Computer College, Kabati, Kenya</span>
-    </div>
-  </div>
+  <title>Services – Bright Cyber & Bookshop</title>
+  <meta name="description" content="Explore the range of services at Bright Cyber & Bookshop: cyber services, computer training, and stationery solutions." />
 
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Bright Cyber</a>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a class="active" href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-sm btn-outline" href="login.html">Login</a>
-        <a class="btn btn-sm btn-primary" href="login.html#signup">Sign Up</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open Menu"></button>
-    </div>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="cyber.html">Bright Cyber</a></li>
+        <li><a href="bookshop.html">Bright Bookshop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="login.html" class="btn-secondary">Login / Sign Up</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero slim" style="--hero:url('assets/images/hero-services.jpg')">
-    <div class="container">
-      <h1>Cyber Services</h1>
-      <p>Fast. Clean. Professional.</p>
+  <section class="hero cyber-hero" style="--hero-img:url('assets/images/services-hero.jpg')">
+    <div class="hero-content">
+      <h1>Our Services</h1>
+      <p>Cyber services, computer training, and stationery solutions for all your needs.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container grid-3">
-      <div class="card service-card">
-        <img src="assets/images/cyber-services.jpg" alt="Printing & Scanning">
-        <h3>Printing &amp; Scanning</h3>
-        <p>Crisp prints, reliable scanning. A4/A3, color or black &amp; white.</p>
+  <section class="services">
+    <div class="container grid-4">
+      <div class="card card-cyber">
+        <h3>Internet & Printing</h3>
+        <p>High-speed internet, document printing, scanning, and photocopying with fast, reliable service.</p>
       </div>
-      <div class="card service-card">
-        <img src="assets/images/hero-home.jpg" alt="Browsing & Typing">
-        <h3>Browsing &amp; Typing</h3>
-        <p>High-speed internet, document typing, formatting &amp; editing.</p>
+      <div class="card card-cyber">
+        <h3>Computer Training</h3>
+        <p>Enroll in short courses: Basic IT, Microsoft Office, and specialized skills starting at KES 4,500.</p>
       </div>
-      <div class="card service-card">
-        <img src="assets/images/hero-courses.jpg" alt="Online Services">
-        <h3>Online Services</h3>
-        <p>KRA, HELB, NEMIS, eCitizen, job apps — done right the first time.</p>
+      <div class="card card-bookshop">
+        <h3>Stationery & Books</h3>
+        <p>Wide selection of notebooks, pens, and office essentials for students and professionals.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section muted">
-    <div class="container grid-2">
-      <div>
-        <h2>Accessories &amp; Stationery</h2>
-        <p>Flash disks, cables, laminating, binding, photo prints, passport photos.</p>
-        <ul class="bullets">
-          <li>Passport photo booth</li>
-          <li>Lamination & spiral binding</li>
-          <li>Forms & application support</li>
-        </ul>
-      </div>
-      <div>
-        <img class="img-card" src="assets/images/hero-services.jpg" alt="Accessories & Stationery">
+      <div class="card card-cyber">
+        <h3>Support & Consultations</h3>
+        <p>Get help with IT setups, software guidance, and expert consultations for personal or business use.</p>
       </div>
     </div>
   </section>
 
-  <section class="section cta">
-    <div class="container cta-inner">
-      <h2>Need it done now?</h2>
-      <p>Walk in or ping us on WhatsApp. No waiting games.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="contact.html">Contact Us</a>
-        <a class="btn btn-outline" href="index.html#map">Find Us</a>
-      </div>
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
+      <div class="footer-links"><a href="policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></div>
     </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Bright Cyber</h4>
-        <p>Practical training & reliable cyber services in Kabati.</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="policy.html">Privacy & Terms</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>📞 +254768726828</p>
-        <p>✉️ brightcyber23@gmail.com</p>
-        <p>📍 Kabati, Kenya</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">© <span id="y"></span> Bright Cyber. All rights reserved.</div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/254768726828" aria-label="WhatsApp">WhatsApp</a>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-  <script src="assets/js/main.js" defer></script>
+  <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

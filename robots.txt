@@ -1,13 +1,4 @@
-# robots.txt for Bright Cyber Website
-
-# Allow all web crawlers access to everything
 User-agent: *
-Disallow:
+Allow: /
 
-# Link to the sitemap
-Sitemap: https://yourwebsite.com/sitemap.xml
-
-# Block specific sensitive folders (if any)
-# Disallow: /admin/
-# Disallow: /private/
-# Disallow: /auth/
+Sitemap: https://p3t3r122430.github.io/brighcyberwebsite/sitemap.xml

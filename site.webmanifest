@@ -1,12 +1,7 @@
 {
-  "name": "Bright Cyber",
+  "name": "Bright Cyber & Bookshop",
   "short_name": "BrightCyber",
-  "description": "Professional website for Bright Computer College & Cyber Services",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#F9F9F9",
-  "theme_color": "#1E90FF",
-  "orientation": "portrait-primary",
+  "description": "BrightCyber & Bookshop - Cyber services, computer training (KES 4,500) and bookshop in Kabati.",
   "icons": [
     {
       "src": "favicon-192x192.png",
@@ -17,11 +12,10 @@
       "src": "favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#004aad",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/brighcyberwebsite/"
 }

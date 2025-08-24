@@ -2,58 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookshop - Bright Computer College</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Bookshop – Bright Cyber & Bookshop</title>
+  <meta name="description" content="Bright Bookshop: Books, stationery, and educational supplies in Kabati.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/validation.js"></script>
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">Bright College</a>
+      <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cyber.html">Bright Cyber</a></li>
+        <li><a class="active" href="bookshop.html">Bright Bookshop</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="bookshop.html" class="active">Bookshop</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="login.html" class="btn-secondary">Login / Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('policy.jpg');">
-    <div class="hero-overlay">
-      <h1>Our Bookshop</h1>
-      <p>Stationery, accessories, and academic resources.</p>
+  <section class="hero bookshop-hero" style="--hero-img:url('assets/images/bookshop-bg.jpg')">
+    <div class="hero-content">
+      <h1>Bright Bookshop</h1>
+      <p>Books, stationery, and educational materials at the best prices.</p>
     </div>
   </section>
 
-  <section class="content">
-    <h2>Available Products</h2>
-    <div class="grid-3">
-      <div class="card">
-        <img src="policy.jpg" alt="Stationery">
-        <h3>Stationery</h3>
-        <p>Exercise books, pens, files, and office supplies.</p>
-      </div>
-      <div class="card">
-        <img src="policy.jpg" alt="Accessories">
-        <h3>Accessories</h3>
-        <p>Computer accessories, flash disks, and cables.</p>
-      </div>
-      <div class="card">
-        <img src="policy.jpg" alt="Books">
+  <section class="categories">
+    <div class="container grid-4">
+      <div class="card card-bookshop">
         <h3>Textbooks</h3>
-        <p>Academic books for various disciplines.</p>
+        <p>Essential textbooks for all levels of education.</p>
+      </div>
+      <div class="card card-bookshop">
+        <h3>Stationery</h3>
+        <p>Notebooks, pens, and office supplies for school and work.</p>
+      </div>
+      <div class="card card-bookshop">
+        <h3>Art Supplies</h3>
+        <p>Paints, brushes, and creative tools for artists and students.</p>
+      </div>
+      <div class="card card-bookshop">
+        <h3>Office Supplies</h3>
+        <p>Paper, folders, and office essentials at competitive prices.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Bright Computer College. All Rights Reserved.</p>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policy.html">Privacy Policy</a> · 
+        <a href="terms.html">Terms</a> · 
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
-  <script src="main.js"></script>
+
+  <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

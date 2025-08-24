@@ -1,210 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Computer College & Cyber Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Cyber & Bookshop</title>
+  <meta name="description" content="Bright Cyber & Bookshop: Cyber services, courses (KES 4,500) and bookshop in Kabati.">
 
-    <!-- Favicon & Manifest -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/validation.js"></script>
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
 </head>
 <body>
-
-<!-- Header & Navbar -->
-<header>
-    <div class="top-bar">
-        <span>📞 +254768726828</span> | <span>✉️ brightcyber23@gmail.com</span> | <span>📍 Kabati, Kenya</span>
-    </div>
+  <header>
     <nav class="navbar">
-        <a href="index.html" class="logo">Bright Cyber</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="services.html">Cyber Services</a></li>
-            <li><a href="bookshop.html">Bookshop</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-            <button id="login-btn">Login</button>
-            <button id="signup-btn">Signup</button>
-        </div>
+      <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="cyber.html">Bright Cyber</a></li>
+        <li><a href="bookshop.html">Bright Bookshop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="login.html" class="btn-secondary">Login / Sign Up</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<!-- Hero Section -->
-<section id="hero" style="background-image: url('assets/images/hero-home.jpg');">
+  <section class="hero hero-home" style="--hero-img:url('assets/images/hero-banner.jpg')">
     <div class="hero-content">
-        <h1>Bright Computer College & Cyber Services</h1>
-        <p>Empowering your future through technology & knowledge</p>
-        <div class="cta-buttons">
-            <a href="courses.html" class="btn-primary">Enroll Now</a>
-            <a href="services.html" class="btn-secondary">Our Services</a>
-        </div>
+      <h1>Welcome to Bright Cyber & Bookshop</h1>
+      <p>Cyber services, computer training, and stationery for everyone in Kabati.</p>
+      <div class="hero-cta">
+        <a href="cyber.html" class="btn-primary">Explore Courses</a>
+        <a href="bookshop.html" class="btn-secondary">Visit Bookshop</a>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-        <div class="about-text">
-            <h2>About Us</h2>
-            <p>Bright Computer College offers top-notch cyber services and training in Kabati, Kenya. Our mission is to empower students with practical knowledge in computing, IT services, and creative skills.</p>
-        </div>
-        <div class="about-image">
-            <img src="assets/images/hero-about.jpg" alt="About Bright Cyber">
-        </div>
+  <section class="highlights">
+    <div class="container grid-4">
+      <div class="card card-cyber">
+        <h3>Computer Training</h3>
+        <p>Practical skills in Office, Excel, and Cybersecurity from KES 4,500.</p>
+      </div>
+      <div class="card card-bookshop">
+        <h3>Stationery & Books</h3>
+        <p>Top-quality stationery for students and professionals.</p>
+      </div>
+      <div class="card card-cyber">
+        <h3>Cyber Services</h3>
+        <p>Printing, typing, and internet services for your needs.</p>
+      </div>
+      <div class="card card-cyber">
+        <h3>Support</h3>
+        <p>Reach out via WhatsApp or our contact form; we respond fast.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Courses Section -->
-<section id="courses">
-    <div class="container">
-        <h2>Our Courses</h2>
-        <div class="course-cards">
-            <div class="course-card">
-                <img src="assets/images/courses.jpg" alt="ICT Basics">
-                <h3>ICT Basics</h3>
-                <p>Learn essential computer skills for professional growth.</p>
-                <p class="price">KES 4500</p>
-                <a href="signup.html" class="btn-primary">Enroll Now</a>
-            </div>
-            <div class="course-card">
-                <img src="assets/images/cyber-services.jpg" alt="Graphics Design">
-                <h3>Graphics Design</h3>
-                <p>Master design tools and visual creativity.</p>
-                <p class="price">KES 4500</p>
-                <a href="signup.html" class="btn-primary">Enroll Now</a>
-            </div>
-            <div class="course-card">
-                <img src="assets/images/hero-courses.jpg" alt="Programming">
-                <h3>Programming</h3>
-                <p>Get hands-on experience with coding and development.</p>
-                <p class="price">KES 4500</p>
-                <a href="signup.html" class="btn-primary">Enroll Now</a>
-            </div>
-        </div>
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policy.html">Privacy Policy</a> · 
+        <a href="terms.html">Terms</a> · 
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-</section>
+  </footer>
 
-<!-- Cyber Services Section -->
-<section id="services">
-    <div class="container">
-        <h2>Cyber Services</h2>
-        <div class="services-cards">
-            <div class="service-card">
-                <h3>Printing & Scanning</h3>
-            </div>
-            <div class="service-card">
-                <h3>Internet & Browsing</h3>
-            </div>
-            <div class="service-card">
-                <h3>Typing Services</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Bookshop Section -->
-<section id="bookshop">
-    <div class="container">
-        <h2>Bookshop & Accessories</h2>
-        <div class="bookshop-cards">
-            <div class="book-card">
-                <img src="assets/images/hero-services.jpg" alt="Flash Disks">
-                <h3>Flash Disks</h3>
-                <p>High-quality storage solutions.</p>
-            </div>
-            <div class="book-card">
-                <img src="assets/images/hero-contact.jpg" alt="Routers">
-                <h3>Routers</h3>
-                <p>Reliable internet routers for home & office.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section id="team">
-    <div class="container">
-        <h2>Our Team</h2>
-        <div class="team-card">
-            <img src="assets/images/team.jpg" alt="Bright Cyber Team">
-            <p>Our dedicated staff ensures top-notch education & services.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form id="contact-form" action="https://formspree.io/f/mwpqdrbw" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p>📞 +254768726828</p>
-            <p>✉️ brightcyber23@gmail.com</p>
-            <p>📍 Kabati, Kenya</p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Bright Computer College. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="terms.html">Terms & Conditions</a> | 
-            <a href="policy.html">Privacy Policy</a>
-        </div>
-    </div>
-</footer>
-
-<!-- Firebase -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyAOImvPY0h7Dg-I0b6QcfZzWR_y5hjRvJA",
-        authDomain: "brightcybersite.firebaseapp.com",
-        projectId: "brightcybersite",
-        storageBucket: "brightcybersite.firebasestorage.app",
-        messagingSenderId: "1062122363677",
-        appId: "1:1062122363677:web:22b5e96dd0320a88411ff4",
-        measurementId: "G-7HJW1J1RXJ"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    // Update navbar on auth state
-    onAuthStateChanged(auth, user => {
-        const authBtns = document.querySelector(".auth-buttons");
-        if(user){
-            authBtns.innerHTML = `<button id="logout-btn">Logout</button>`;
-            document.getElementById("logout-btn").addEventListener("click", () => signOut(auth));
-        }
-    });
-</script>
-
-<!-- JS -->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/validation.js"></script>
-
+  <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

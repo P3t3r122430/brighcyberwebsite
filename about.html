@@ -1,132 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>About — Bright Cyber</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Learn about Bright Computer College & Cyber Services — our mission, values, and what makes us different." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About – Bright Cyber & Bookshop</title>
+  <meta name="description" content="About Bright Cyber & Bookshop: Our mission, values, and services in Kabati.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body class="page about-page">
-  <!-- Top contact strip -->
-  <div class="topbar">
-    <div class="container">
-      <span>📞 +254768726828</span>
-      <span>✉️ brightcyber23@gmail.com</span>
-      <span>📍 Bright Computer College, Kabati, Kenya</span>
-    </div>
-  </div>
 
-  <!-- Navbar -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Bright Cyber</a>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-sm btn-outline" href="login.html">Login</a>
-        <a class="btn btn-sm btn-primary" href="login.html#signup">Sign Up</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open Menu"></button>
-    </div>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/validation.js"></script>
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cyber.html">Bright Cyber</a></li>
+        <li><a href="bookshop.html">Bright Bookshop</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="login.html" class="btn-secondary">Login / Sign Up</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero slim" style="--hero:url('assets/images/hero-about.jpg')">
+  <section class="hero about-hero" style="--hero-img:url('assets/images/about-bg.jpg')">
+    <div class="hero-content">
+      <h1>About Bright Cyber & Bookshop</h1>
+      <p>Empowering Kabati community with training, cyber services, and quality books.</p>
+    </div>
+  </section>
+
+  <section class="content">
     <div class="container">
-      <h1>About Bright Cyber</h1>
-      <p>Training. Services. Results. Built for real outcomes.</p>
+      <h2>Our Mission</h2>
+      <p>To provide quality cyber services, affordable training courses, and educational materials for the Kabati community.</p>
+
+      <h2>Our Vision</h2>
+      <p>To be the most trusted center for learning, cyber services, and book supplies in the region.</p>
+
+      <h2>Our Values</h2>
+      <ul>
+        <li>Integrity in service and training</li>
+        <li>Excellence in courses and support</li>
+        <li>Community-driven and customer-focused</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Mission / Story -->
-  <section class="section">
-    <div class="container grid-2">
-      <div>
-        <h2>Who we are</h2>
-        <p>
-          Bright Computer College & Cyber Services delivers practical, job-ready digital skills and reliable cyber services.
-          We focus on clarity, speed, and professional support — no fluff.
-        </p>
-        <ul class="checks">
-          <li>Hands-on computer literacy & productivity</li>
-          <li>Professional printing, scanning, and online services</li>
-          <li>Transparent pricing (Courses from KES 4,500)</li>
-        </ul>
-      </div>
-      <div>
-        <img class="img-card" src="assets/images/hero-about.jpg" alt="About Bright Cyber">
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policy.html">Privacy Policy</a> · 
+        <a href="terms.html">Terms</a> · 
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-  </section>
-
-  <!-- Values -->
-  <section class="section muted">
-    <div class="container grid-3">
-      <div class="card">
-        <h3>Clarity</h3>
-        <p>We teach and serve with straight talk and real outcomes.</p>
-      </div>
-      <div class="card">
-        <h3>Speed</h3>
-        <p>Fast turnaround on services, streamlined training flow.</p>
-      </div>
-      <div class="card">
-        <h3>Support</h3>
-        <p>We stay responsive — email, phone, WhatsApp. No ghosting.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta">
-    <div class="container cta-inner">
-      <h2>Ready to get started?</h2>
-      <p>Join our next intake or visit our cyber desk today.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="courses.html">View Courses</a>
-        <a class="btn btn-outline" href="services.html">Our Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Bright Cyber</h4>
-        <p>Practical training & reliable cyber services in Kabati.</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="policy.html">Privacy & Terms</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>📞 +254768726828</p>
-        <p>✉️ brightcyber23@gmail.com</p>
-        <p>📍 Kabati, Kenya</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">© <span id="y"></span> Bright Cyber. All rights reserved.</div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/254768726828" aria-label="WhatsApp">WhatsApp</a>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-  <script src="assets/js/main.js" defer></script>
+  <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>
