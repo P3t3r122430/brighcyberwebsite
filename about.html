@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About – Bright Cyber & Bookshop</title>
-  <meta name="description" content="About Bright Cyber & Bookshop: Our mission, values, and services in Kabati.">
+  <meta name="description" content="We empower Kabati with affordable cyber services, practical computer training and quality educational resources." />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="manifest" href="assets/site.webmanifest">
+  <!-- Icons & Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/validation.js"></script>
-  <script defer src="assets/js/auth.js"></script>
-  <script defer src="assets/js/firebase.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAOImvPY0h7Dg-I0b6QcfZzWR_y5hjRvJA",
+      authDomain: "brightcybersite.firebaseapp.com",
+      projectId: "brightcybersite",
+      storageBucket: "brightcybersite.firebasestorage.app",
+      messagingSenderId: "1062122363677",
+      appId: "1:1062122363677:web:22b5e96dd0320a88411ff4",
+      measurementId: "G-7HJW1J1RXJ"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
+  <!-- Header/Navbar -->
   <header>
     <nav class="navbar">
       <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
@@ -36,41 +53,54 @@
     </nav>
   </header>
 
-  <section class="hero about-hero" style="--hero-img:url('assets/images/about-bg.jpg')">
+  <!-- Hero -->
+  <section class="hero hero-about" style="--hero-img:url('assets/images/hero-about.jpg')">
     <div class="hero-content">
-      <h1>About Bright Cyber & Bookshop</h1>
-      <p>Empowering Kabati community with training, cyber services, and quality books.</p>
+      <h1>About Us</h1>
+      <p>Empowering the community with digital services and affordable learning resources.</p>
     </div>
   </section>
 
-  <section class="content">
+  <!-- About Info -->
+  <section class="about-info">
     <div class="container">
-      <h2>Our Mission</h2>
-      <p>To provide quality cyber services, affordable training courses, and educational materials for the Kabati community.</p>
-
-      <h2>Our Vision</h2>
-      <p>To be the most trusted center for learning, cyber services, and book supplies in the region.</p>
-
-      <h2>Our Values</h2>
-      <ul>
-        <li>Integrity in service and training</li>
-        <li>Excellence in courses and support</li>
-        <li>Community-driven and customer-focused</li>
-      </ul>
+      <h2>Who We Are</h2>
+      <p>Bright Cyber & Bookshop is Kabati’s trusted hub for digital services and educational resources. We deliver fast cyber services, practical computer courses, and a wide range of textbooks and stationery – all under one roof.</p>
+      <div class="grid">
+        <div class="card"><h3>Mission</h3><p>Empower individuals and institutions through digital literacy and access to quality educational materials.</p></div>
+        <div class="card"><h3>Vision</h3><p>To be the most trusted centre for cyber services, book supply and IT training in our region.</p></div>
+        <div class="card"><h3>Values</h3>
+          <ul>
+            <li>Integrity</li>
+            <li>Affordability</li>
+            <li>Community</li>
+            <li>Excellence</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Partner With Us</h2>
+      <p>Schools and organisations welcome. We offer tailored solutions for bulk supplies and training.</p>
+      <a class="btn-primary" href="contact.html">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
       <div class="footer-links">
-        <a href="policy.html">Privacy Policy</a> · 
-        <a href="terms.html">Terms</a> · 
-        <a href="contact.html">Contact</a>
+        <a href="policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

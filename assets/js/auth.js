@@ -1,61 +1,65 @@
 // auth.js
-import { auth } from './firebase.js';
-import { 
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword, 
-    onAuthStateChanged, 
-    signOut 
-} from "firebase/auth";
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Firebase app (from firebase.js)
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
 
-// SIGN UP FUNCTION
-export function signup(email, password) {
-    createUserWithEmailAndPassword(auth, email, password)
+  // ===== SIGNUP =====
+  const signupForm = document.getElementById("signup-form");
+  if (signupForm) {
+    signupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("su-name").value.trim();
+      const email = document.getElementById("su-email").value.trim();
+      const password = document.getElementById("su-password").value.trim();
+      const confirm = document.getElementById("su-confirm").value.trim();
+
+      if (password !== confirm) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            const user = userCredential.user;
-            alert(`Signup successful! Welcome, ${user.email}`);
-            // Optionally, redirect to home page
-            window.location.href = "index.html";
+          const user = userCredential.user;
+          // Optionally update display name
+          user.updateProfile({ displayName: name });
+          alert(`Welcome ${name}! Account created successfully.`);
+          signupForm.reset();
+          window.location.href = "login.html"; // redirect to login
         })
         .catch((error) => {
-            const errorMessage = error.message;
-            alert(`Signup failed: ${errorMessage}`);
+          alert(error.message);
         });
-}
+    });
+  }
 
-// SIGN IN FUNCTION
-export function signin(email, password) {
-    signInWithEmailAndPassword(auth, email, password)
+  // ===== LOGIN =====
+  const loginForm = document.getElementById("login-form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("li-email").value.trim();
+      const password = document.getElementById("li-password").value.trim();
+
+      auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            const user = userCredential.user;
-            alert(`Login successful! Welcome back, ${user.email}`);
-            // Optionally, redirect to home page
-            window.location.href = "index.html";
+          const user = userCredential.user;
+          alert(`Welcome back, ${user.displayName || "user"}!`);
+          loginForm.reset();
+          window.location.href = "index.html"; // redirect after login
         })
         .catch((error) => {
-            const errorMessage = error.message;
-            alert(`Login failed: ${errorMessage}`);
+          alert(error.message);
         });
-}
+    });
+  }
 
-// SIGN OUT FUNCTION
-export function logout() {
-    signOut(auth)
-        .then(() => {
-            alert("You have been signed out.");
-            window.location.href = "index.html";
-        })
-        .catch((error) => {
-            alert(`Sign out error: ${error.message}`);
-        });
-}
-
-// AUTH STATE LISTENER
-onAuthStateChanged(auth, (user) => {
+  // Optional: auto redirect if already logged in
+  auth.onAuthStateChanged((user) => {
     if (user) {
-        console.log("User is signed in:", user.email);
-        // Optional: update UI to show user is logged in
-    } else {
-        console.log("No user is signed in.");
-        // Optional: update UI to show user is logged out
+      // You can redirect or show user info if logged in
+      console.log(`Logged in as ${user.email}`);
     }
+  });
 });

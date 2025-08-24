@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bright Bookshop – Bright Cyber & Bookshop</title>
-  <meta name="description" content="Bright Bookshop: Books, stationery, and educational supplies in Kabati.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bright Bookshop – Stationery, Textbooks & Supplies</title>
+  <meta name="description" content="Textbooks, revision guides, stationery and office supplies at Bright Bookshop, Kabati. Bulk orders welcome." />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="manifest" href="assets/site.webmanifest">
+  <!-- Icons & Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/validation.js"></script>
-  <script defer src="assets/js/auth.js"></script>
-  <script defer src="assets/js/firebase.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAOImvPY0h7Dg-I0b6QcfZzWR_y5hjRvJA",
+      authDomain: "brightcybersite.firebaseapp.com",
+      projectId: "brightcybersite",
+      storageBucket: "brightcybersite.firebasestorage.app",
+      messagingSenderId: "1062122363677",
+      appId: "1:1062122363677:web:22b5e96dd0320a88411ff4",
+      measurementId: "G-7HJW1J1RXJ"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
+  <!-- Header/Navbar -->
   <header>
     <nav class="navbar">
       <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
@@ -36,34 +53,38 @@
     </nav>
   </header>
 
-  <section class="hero bookshop-hero" style="--hero-img:url('assets/images/bookshop-bg.jpg')">
+  <!-- Hero -->
+  <section class="hero hero-bookshop" style="--hero-img:url('assets/images/hero-banner.jpg')">
     <div class="hero-content">
       <h1>Bright Bookshop</h1>
-      <p>Books, stationery, and educational materials at the best prices.</p>
+      <p>Your trusted partner in textbooks, revision guides and stationery.</p>
     </div>
   </section>
 
+  <!-- Product Categories -->
   <section class="categories">
-    <div class="container grid-4">
-      <div class="card card-bookshop">
-        <h3>Textbooks</h3>
-        <p>Essential textbooks for all levels of education.</p>
-      </div>
-      <div class="card card-bookshop">
-        <h3>Stationery</h3>
-        <p>Notebooks, pens, and office supplies for school and work.</p>
-      </div>
-      <div class="card card-bookshop">
-        <h3>Art Supplies</h3>
-        <p>Paints, brushes, and creative tools for artists and students.</p>
-      </div>
-      <div class="card card-bookshop">
-        <h3>Office Supplies</h3>
-        <p>Paper, folders, and office essentials at competitive prices.</p>
+    <div class="container">
+      <h2>Products</h2>
+      <div class="grid">
+        <div class="card"><h3>School Textbooks</h3><p>Approved curriculum books for primary and secondary schools.</p></div>
+        <div class="card"><h3>Stationery</h3><p>Pens, pencils, notebooks, files, rulers, geometry sets and more.</p></div>
+        <div class="card"><h3>Office Supplies</h3><p>Paper, cartridges, files, envelopes and printing accessories.</p></div>
+        <div class="card"><h3>Revision Materials</h3><p>KCPE/KCSE guides, past papers and exam prep kits.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Bulk Orders for Schools & Offices</h2>
+      <p>We offer discounts on bulk purchases. Fast sourcing and delivery.</p>
+      <a href="contact.html" class="btn-primary">Contact Us</a>
+      <a href="https://wa.me/254768726828" target="_blank" class="btn-secondary">Order via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
@@ -75,6 +96,7 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

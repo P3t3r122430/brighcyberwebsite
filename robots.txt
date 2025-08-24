@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://p3t3r122430.github.io/brighcyberwebsite/sitemap.xml
+# Sitemap location
+Sitemap: https://P3t3r122430.github.io/brightcyberwebsite/sitemap.xml

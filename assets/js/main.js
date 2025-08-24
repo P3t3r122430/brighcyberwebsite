@@ -1,22 +1,37 @@
-// Smooth scroll for nav links
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    if (link.hash) {
-      e.preventDefault();
-      document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth' });
-    }
+// Navbar mobile toggle + active link highlighting
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (navbar && navLinks) {
+    // Create hamburger button
+    const navToggle = document.createElement("button");
+    navToggle.setAttribute("aria-label", "Toggle navigation");
+    navToggle.classList.add("nav-toggle");
+    navToggle.innerHTML = "&#9776;";
+
+    // Insert before navLinks
+    navbar.insertBefore(navToggle, navLinks);
+
+    // Toggle menu on click
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
+
+    // Close menu when a link is clicked (mobile)
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("show"));
+    });
+
+    // Close menu if click outside
+    document.addEventListener("click", (e) => {
+      if (!navbar.contains(e.target) && navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+      }
+    });
+  }
+
+  // Active link based on pathname (safer than full URL)
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    if (a.pathname === currentPath) a.classList.add("active");
   });
 });
-
-// Optional: rotate hero text messages
-const messages = [
-  "Welcome to Bright Cyber",
-  "Your tech world starts here",
-  "Learn, Connect, Grow"
-];
-let i = 0;
-const heroText = document.querySelector('.hero-text h1');
-setInterval(() => {
-  heroText.textContent = messages[i];
-  i = (i + 1) % messages.length;
-}, 4000);

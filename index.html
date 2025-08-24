@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bright Cyber & Bookshop</title>
-  <meta name="description" content="Bright Cyber & Bookshop: Cyber services, courses (KES 4,500) and bookshop in Kabati.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bright Cyber & Bookshop | Kabati – Cyber Services, Training & Books</title>
+  <meta name="description" content="Bright Cyber & Bookshop in Kabati: reliable cyber services, professional computer courses (KES 4,500), stationery & textbooks. Fast, friendly, affordable." />
+  <meta name="keywords" content="Bright Cyber, Bookshop, Kabati, cyber cafe, computer training, stationery, textbooks, printing, scanning, laminating, passport photo" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="manifest" href="assets/site.webmanifest">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bright Cyber & Bookshop – Kabati" />
+  <meta property="og:description" content="Cyber services, KES 4,500 computer courses, and a full bookshop – one roof." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain-here/" />
+  <meta property="og:image" content="assets/images/hero-home.jpg" />
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bright Cyber & Bookshop – Kabati" />
+  <meta name="twitter:description" content="Cyber services, KES 4,500 computer courses, and a full bookshop – one roof." />
+  <meta name="twitter:image" content="assets/images/hero-home.jpg" />
+
+  <!-- Icons & Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/validation.js"></script>
-  <script defer src="assets/js/auth.js"></script>
-  <script defer src="assets/js/firebase.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAOImvPY0h7Dg-I0b6QcfZzWR_y5hjRvJA",
+      authDomain: "brightcybersite.firebaseapp.com",
+      projectId: "brightcybersite",
+      storageBucket: "brightcybersite.firebasestorage.app",
+      messagingSenderId: "1062122363677",
+      appId: "1:1062122363677:web:22b5e96dd0320a88411ff4",
+      measurementId: "G-7HJW1J1RXJ"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- JSON-LD (Business) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bright Cyber & Bookshop",
+    "image": "assets/images/hero-home.jpg",
+    "telephone": "+254768726828",
+    "description": "Cyber services, computer training (KES 4,500), stationery and textbooks in Kabati.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kabati",
+      "addressCountry": "KE"
+    },
+    "openingHours": "Mo-Sa 08:00-19:00"
+  }
+  </script>
 </head>
 <body>
+  <!-- Header/Navbar -->
   <header>
     <nav class="navbar">
       <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
@@ -36,49 +86,92 @@
     </nav>
   </header>
 
-  <section class="hero hero-home" style="--hero-img:url('assets/images/hero-banner.jpg')">
+  <!-- Hero -->
+  <section class="hero hero-home" style="--hero-img:url('assets/images/hero-home.jpg')">
     <div class="hero-content">
-      <h1>Welcome to Bright Cyber & Bookshop</h1>
-      <p>Cyber services, computer training, and stationery for everyone in Kabati.</p>
+      <h1>One Hub for Digital Services & Learning</h1>
+      <p>Fast cyber services, quality books & stationery, and hands-on computer training from KES 4,500.</p>
       <div class="hero-cta">
-        <a href="cyber.html" class="btn-primary">Explore Courses</a>
-        <a href="bookshop.html" class="btn-secondary">Visit Bookshop</a>
+        <a class="btn-primary" href="cyber.html">Explore Cyber Services</a>
+        <a class="btn-secondary" href="bookshop.html">Visit Bookshop</a>
       </div>
     </div>
   </section>
 
+  <!-- Highlights -->
   <section class="highlights">
+    <div class="container grid">
+      <article class="card card-cyber">
+        <img src="assets/images/cyber-services.jpg" alt="Computers and printing at Bright Cyber" />
+        <div class="card-body">
+          <h3>Bright Cyber</h3>
+          <p>Printing, scanning, laminating, KRA, NSSF, NHIF, eCitizen, passport photos, browsing & more.</p>
+          <a class="btn-primary" href="cyber.html">See Services</a>
+        </div>
+      </article>
+      <article class="card card-bookshop">
+        <img src="assets/images/hero-banner.jpg" alt="Bookshelves at Bright Bookshop" />
+        <div class="card-body">
+          <h3>Bright Bookshop</h3>
+          <p>Curriculum textbooks, revision guides, stationery and office supplies at friendly prices.</p>
+          <a class="btn-secondary" href="bookshop.html">Browse Bookshop</a>
+        </div>
+      </article>
+      <article class="card card-courses">
+        <img src="assets/images/courses.jpg" alt="Student learning computers" />
+        <div class="card-body">
+          <h3>Computer Courses</h3>
+          <p>Practical computer training from KES 4,500. Flexible schedules, beginner friendly.</p>
+          <a class="btn-primary" href="cyber.html#courses">View Courses</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Trust badges / Reasons -->
+  <section class="trust">
     <div class="container grid-4">
-      <div class="card card-cyber">
-        <h3>Computer Training</h3>
-        <p>Practical skills in Office, Excel, and Cybersecurity from KES 4,500.</p>
+      <div class="trust-item">
+        <h4>Affordable</h4>
+        <p>Competitive pricing for students and small businesses.</p>
       </div>
-      <div class="card card-bookshop">
-        <h3>Stationery & Books</h3>
-        <p>Top-quality stationery for students and professionals.</p>
+      <div class="trust-item">
+        <h4>Reliable</h4>
+        <p>Professional service, fast turnaround, friendly support.</p>
       </div>
-      <div class="card card-cyber">
-        <h3>Cyber Services</h3>
-        <p>Printing, typing, and internet services for your needs.</p>
+      <div class="trust-item">
+        <h4>Local</h4>
+        <p>Based in Kabati, serving the community with care.</p>
       </div>
-      <div class="card card-cyber">
-        <h3>Support</h3>
-        <p>Reach out via WhatsApp or our contact form; we respond fast.</p>
+      <div class="trust-item">
+        <h4>All-in-One</h4>
+        <p>Cyber, courses, and bookshop under one roof.</p>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Need help now?</h2>
+      <p>Message us on WhatsApp. We reply fast.</p>
+      <a class="btn-primary" href="https://wa.me/254768726828" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <p>&copy; 2025 Bright Cyber & Bookshop. All rights reserved.</p>
       <div class="footer-links">
-        <a href="policy.html">Privacy Policy</a> · 
-        <a href="terms.html">Terms</a> · 
+        <a href="policy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms</a> ·
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>

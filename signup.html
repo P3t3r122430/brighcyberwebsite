@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sign Up – Bright Cyber & Bookshop</title>
-  <meta name="description" content="Create your Bright Cyber & Bookshop account to enroll for courses and contact support.">
+  <meta name="description" content="Create your Bright Cyber & Bookshop account to enroll for courses and contact support." />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/auth.js"></script>
-  <script defer src="assets/js/firebase.js"></script>
+  <script defer src="assets/js/validation.js"></script>
 </head>
 <body class="auth-page" style="--hero-img:url('assets/images/login-bg.jpg')">
-
   <header>
     <nav class="navbar">
       <a class="logo" href="index.html">Bright Cyber & Bookshop</a>
@@ -39,18 +39,18 @@
   <section class="auth-section">
     <div class="auth-container">
       <h2>Create Account</h2>
-      <form id="signup-form" action="#" method="POST">
+      <form action="#" method="POST" id="signup-form">
         <label for="su-name">Full Name</label>
-        <input type="text" id="su-name" name="name" required>
+        <input type="text" id="su-name" name="name" required />
 
         <label for="su-email">Email</label>
-        <input type="email" id="su-email" name="email" required>
+        <input type="email" id="su-email" name="email" required />
 
         <label for="su-password">Password</label>
-        <input type="password" id="su-password" name="password" required>
+        <input type="password" id="su-password" name="password" required />
 
         <label for="su-confirm">Confirm Password</label>
-        <input type="password" id="su-confirm" name="confirm-password" required>
+        <input type="password" id="su-confirm" name="confirm-password" required />
 
         <button type="submit" class="btn-primary">Sign Up</button>
         <p>Already have an account? <a href="login.html">Login</a></p>
@@ -64,6 +64,16 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/254768726828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+
+<!-- Your Firebase config -->
+<script defer src="assets/js/firebase.js"></script>
+
+<!-- Auth logic -->
+<script defer src="assets/js/auth.js"></script>
 </body>
 </html>

@@ -1,31 +1,41 @@
-// Validation for login & signup forms
-
+// Basic form validation: required fields + password confirmation for signup
 document.addEventListener("DOMContentLoaded", () => {
-  // Signup form validation
-  const signupForm = document.querySelector("form[action='#'][method='POST']");
-  if (signupForm && document.querySelector("#confirm-password")) {
-    signupForm.addEventListener("submit", (e) => {
-      const password = document.querySelector("#password").value;
-      const confirmPassword = document.querySelector("#confirm-password").value;
 
-      if (password !== confirmPassword) {
+  // Generic required validation for all forms
+  document.querySelectorAll("form").forEach(form => {
+    const inputs = form.querySelectorAll("input[required], textarea[required]");
+
+    inputs.forEach(el => {
+      // Reset border on focus
+      el.addEventListener("focus", () => el.style.border = "1px solid #dcdcdc");
+    });
+
+    form.addEventListener("submit", (e) => {
+      let ok = true;
+
+      inputs.forEach(el => {
+        if (!el.value.trim()) {
+          ok = false;
+          el.style.border = "2px solid red";
+        } else {
+          el.style.border = "1px solid #dcdcdc";
+        }
+      });
+
+      if (!ok) {
         e.preventDefault();
-        alert("Passwords do not match. Please try again.");
+        alert("Please fill in all required fields.");
+        return; // stop further validation
+      }
+
+      // Password confirmation for signup
+      const suPass = document.getElementById("su-password");
+      const suConfirm = document.getElementById("su-confirm");
+      if (suPass && suConfirm && suPass.value !== suConfirm.value) {
+        e.preventDefault();
+        alert("Passwords do not match.");
+        suConfirm.focus();
       }
     });
-  }
-
-  // Login form validation (basic check)
-  const loginForm = document.querySelector("form[action='#'][method='POST']");
-  if (loginForm && !document.querySelector("#confirm-password")) {
-    loginForm.addEventListener("submit", (e) => {
-      const email = document.querySelector("#email").value;
-      const password = document.querySelector("#password").value;
-
-      if (!email || !password) {
-        e.preventDefault();
-        alert("Please enter both email and password.");
-      }
-    });
-  }
+  });
 });

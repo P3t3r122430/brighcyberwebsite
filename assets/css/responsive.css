@@ -1,81 +1,97 @@
 /* ================================
-   Responsive adjustments
-   ================================ */
+   Responsive Adjustments
+================================ */
 
-/* NAVBAR */
+/* ----- Navbar & Menu ----- */
 @media (max-width: 860px) {
   .nav-links {
     position: absolute;
-    right: 0;
     top: 64px;
-    background: var(--cyber);
-    display: none;
-    flex-direction: column;
+    right: 0;
     width: 220px;
+    flex-direction: column;
+    background: var(--cyber);
     padding: 1rem;
     box-shadow: 0 10px 20px rgba(0,0,0,.25);
-    z-index: 999;
+    display: none;
+    z-index: 1001;
+  }
+  .nav-links.show {
+    display: flex;
   }
 
-  .nav-links.show { display: flex; }
+  .nav-links li {
+    margin-bottom: 0.5rem;
+  }
 
-  .nav-links li { margin-bottom: .6rem; }
-  .nav-links a { padding: .6rem 1rem; }
-
-  .nav-toggle { display: block; }
+  .nav-toggle {
+    display: block;
+  }
 }
 
-/* HERO SECTIONS */
-@media (max-width: 700px) {
-  .hero { padding: 4rem 1rem; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .hero-cta { flex-direction: column; gap: .6rem; }
+/* ----- Hero Section ----- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
-/* GRID LAYOUTS */
-@media (max-width: 900px) {
-  .grid, .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+/* ----- Grid Layouts ----- */
+@media (max-width: 860px) {
+  .grid, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
-/* CARDS */
-@media (max-width: 500px) {
-  .card { padding: 1rem; }
-  .card h3 { font-size: 1.1rem; }
-  .card .price { font-size: .95rem; }
-}
-
-/* AUTH FORMS */
-@media (max-width: 500px) {
-  .auth-container { width: 90%; padding: 1.5rem; }
-  .auth-container h2 { font-size: 1.4rem; }
-  .auth-container form input, .auth-container form button { font-size: .95rem; }
-}
-
-/* FOOTER */
-@media (max-width: 700px) {
-  .footer-content { flex-direction: column; text-align: center; gap: .6rem; }
-  .footer-links a { margin: 0 .3rem; display: inline-block; }
-}
-
-/* BLOG LIST */
+/* ----- Cards ----- */
 @media (max-width: 600px) {
-  .blog-list .post h2 { font-size: 1.2rem; }
-  .blog-list .post .meta { font-size: .85rem; }
+  .card {
+    padding: 1rem;
+  }
+  .card h3 {
+    font-size: 1.1rem;
+  }
+  .card .price {
+    font-size: 0.95rem;
+  }
 }
 
-/* TABLES AND TABLE-LIKE CONTENT */
+/* ----- Forms ----- */
+@media (max-width: 500px) {
+  input, textarea {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .auth-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+/* ----- Footer ----- */
 @media (max-width: 600px) {
-  table, thead, tbody, th, td, tr { display: block; width: 100%; }
-  th, td { text-align: left; padding: .6rem; }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.6rem;
+  }
 }
 
-/* BUTTONS */
-@media (max-width: 450px) {
-  .btn-primary, .btn-secondary { padding: .55rem .9rem; font-size: .95rem; }
-}
-
-/* HERO BACKGROUNDS FIX */
-@media (max-width: 480px) {
-  .hero::before, .auth-page::before { background-position: top center; }
+/* ----- WhatsApp Float ----- */
+@media (max-width: 500px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    right: 12px;
+    bottom: 12px;
+  }
 }
